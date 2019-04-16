@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fake Dev Outing Survey</title>
+<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	<header>
+	<h1> Dev Team Outing Survey </h1>
+
+	<p>It's April, and that means it is time for a fun team building activity with your coworkers! (Remember your request for an ergonomic keyboard that was denied? It’s because we had to pay for this.)</p>
+	<p>You will get to experience some sunlight on a <em>workday</em> (you are welcome), get away from your desktop (but not your phones), eat free food (but pay for your own drinks, because alcohol isn't covered), and awkwardly stand around your coworkers!</p>
+	<p>You will fill out the form below by <time datetime="2019-04-30T17:00">5 pm on April 30, 2019</time>, or else there will be dire <a href="https://www.youtube.com/watch?v=1dWjKkF0Zi4">consequences</a>.</p>
+	</header>
+	<main>
+	 <form method="get">
+		 <section>
+			 <h2>Personal Information</h2>
+		 <fieldset>
+		 <legend>Name</legend>
+
+		<div class="question">
+			<p>First Name</p> 
+		</div>
+		
+		<div class="response">
+			<input type="text" name="firstName" placeholder="Enter your first name" required>	
+		</div>
+
+		<div class="question">
+			<p>Last Name</p> 
+		</div>
+
+		<div class="response">
+			<input type="text" name="lastName" placeholder="Enter your last name" required>	
+		</div>
+		 </fieldset>
+
+		<div class="question">
+			<p>Age</p> 
+		</div>
+
+		<div class="response">
+			<input type="number" min="18" max="99"name="age" placeholder="Enter your age" required>	
+		</div>
+
+		<div class="question">
+			<p>E-mail</p> 
+		</div>
+
+		<div class="response">
+			<input type="email" placeholder="Enter your email" required>	
+		</div>
+		 </section>
+
+		 <section>
+			 <h2>Work Information</h2>
+
+		<fieldset>
+		 <legend>Work hours</legend>
+		 <p>We are collecting this information so that we can pick the best time for the outing. Your answers here will in no way incriminate you in anyway.</p>
+		<div class="question">
+			<p>What time do you come to work?</p> 
+		</div>
+
+		<div class="response">
+			<input type="time" name="startTime" value="06:00" required>	
+		</div>
+
+		<div class="question">
+			<p>What time do you leave work?</p> 
+		</div>
+
+		<div class="response">
+			<input type="time" name="endTime" value="19:00" required>	
+		</div>
+		 </fieldset>
+
+		<div class="question">
+			<p>Company Start Date (Approximation is okay)</p> 
+		</div>
+
+		<div class="response">
+			<input type="date" name="startDate"> 	
+			<!-- Use month if available <input type="month" name="startDate"> --> 	
+		</div>
+
+		<div class="question">
+			<p>Your Team Name</p> 
+		</div>
+
+		<div class="response">
+			<select name="teamName">	
+
+				<option disabled selected value>--Please select a team--</option>
+				<option>The Coots</option>
+				<option>Herons of the Night</option>
+				<option>American Pelicans in America</option>
+				<option>Not-so-Canadian Geese</option>
+				<option>The Greatest Scaups</option>
+			</select>
+		</div>
+
+		<div class="question">
+			<p>
+Which of the following best describes your current role in the team?
+			</p> 
+		</div>
+
+		<div class="response">
+			<ul>
+			<li><input type="radio" name="role"> Team Lead</li>
+			<li><input type="radio" name="role"> Front-end Engineer</li>
+			<li><input type="radio" name="role"> Back-end Engineer</li>
+			<li><input type="radio" name="role"> Data Person</li>
+			<li><input type="radio" name="role"> QA</li>
+			</ul>
+		</div>
+		 </section>
+
+		 <section>
+			 <h2>Outing Information</h2>
+		<div class="question">
+ <p>Please select at least 3 activities that interest you.</p>
+		</div>
+
+		<div class="response">
+			<input type="checkbox" value="fish">Curling
+			<input type="checkbox" value="fish">Karaoke
+			<input type="checkbox" value="fish">Movie and Dinner
+			<input type="checkbox" value="fish">Glass blowing
+			<input type="checkbox" value="fish">Laser Tag
+			<input type="checkbox" value="fish">Mini Golf
+			<input type="checkbox" value="fish">Arcade
+			<input type="checkbox" value="fish">Beach
+			<input type="checkbox" value="fish">Food tour
+			<input type="checkbox" value="fish">Wine tasting
+			<input type="checkbox" value="fish">Museum
+		</div>
+
+		<div class="question">
+	<p>Are there any days you absolutely cannot attend? Enter up to 3 dates between May 1 and May 31.</p>
+		</div>
+
+		<div class="response">
+			<ul>
+			<li><input type="date" name="startDate"></li> 	
+			<li><input type="date" name="startDate"></li> 	
+			<li><input type="date" name="startDate"></li> 	
+			</ul>
+		</div>
+
+		<div class="question">
+			<p>Any comments or suggestions?</p>
+		</div>
+
+		<div class="response">
+			<input type="text">		
+		</div>
+		 </section>
+
+		<input type="submit" value="Submit">
+		<input type="reset">
+	 </form> 
+	</main>
+	<footer>
+	<hr/>
+	<p>Copyright &#169; <time datetime="2019">2019</time> by Ki Song. All rights reserved.</p>
+	<p>This page was last updated on <time datetime="2019-04-16">April 16th, 2019</time>.</p>
+	</footer>
+</body>
+</html> 
