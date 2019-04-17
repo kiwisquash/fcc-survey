@@ -6,50 +6,39 @@
 </head>
 <body>
 	<header>
-	<h1> Dev Team Outing Survey </h1>
+	<h1 id="title"> Dev Team Outing Survey </h1>
 
-	<p>It's April, and that means it is time for a fun team building activity with your coworkers! (Remember your request for an ergonomic keyboard that was denied? It’s because we had to pay for this.)</p>
+	<p id="description">It's April, and that means it is time for a fun team building activity with your coworkers! (Remember your request for an ergonomic keyboard that was denied? It’s because we had to pay for this.)</p>
 	<p>You will get to experience some sunlight on a <em>workday</em> (you are welcome), get away from your desktop (but not your phones), eat free food (but pay for your own drinks, because alcohol isn't covered), and awkwardly stand around your coworkers!</p>
 	<p>You will fill out the form below by <time datetime="2019-04-30T17:00">5 pm on April 30, 2019</time>, or else there will be dire <a href="https://www.youtube.com/watch?v=1dWjKkF0Zi4">consequences</a>.</p>
 	</header>
 	<main>
-	 <form method="get">
+	 <form id="survey-form" method="get">
 		 <section>
 			 <h2>Personal Information</h2>
-		 <fieldset>
-		 <legend>Name</legend>
 
 		<div class="question">
-			<p>First Name</p> 
-		</div>
-		
-		<div class="response">
-			<input type="text" name="firstName" placeholder="Enter your first name" required>	
-		</div>
-
-		<div class="question">
-			<p>Last Name</p> 
+			<label id="name-label" for="name">Name</label> 
 		</div>
 
 		<div class="response">
-			<input type="text" name="lastName" placeholder="Enter your last name" required>	
-		</div>
-		 </fieldset>
-
-		<div class="question">
-			<p>Age</p> 
-		</div>
-
-		<div class="response">
-			<input type="number" min="18" max="99"name="age" placeholder="Enter your age" required>	
+			<input id="name" type="text" name="name" placeholder="Enter your name" required>	
 		</div>
 
 		<div class="question">
-			<p>E-mail</p> 
+			<label id="number-label" for="number">Age</label> 
 		</div>
 
 		<div class="response">
-			<input type="email" placeholder="Enter your email" required>	
+			<input id="number" type="number" min="18" max="99" name="age" placeholder="Enter your age" required>	
+		</div>
+
+		<div class="question">
+			<label id="email-label" for="email">E-mail</label> 
+		</div>
+
+		<div class="response">
+			<input id="email" type="email" name="email" placeholder="Enter your email" required>	
 		</div>
 		 </section>
 
@@ -58,115 +47,108 @@
 
 		<fieldset>
 		 <legend>Work hours</legend>
-		 <p>We are collecting this information so that we can pick the best time for the outing. Your answers here will in no way incriminate you in anyway.</p>
+		 <p>We are collecting this information so that we can pick the best time for the outing. Don't worry if your hours are dramatically different from the default values--despite the rumors, your answers here will not incriminate you in anyway.</p>
 		<div class="question">
-			<p>What time do you come to work?</p> 
+			<label id="startTime-label" for="startTime">What time do you come to work?</label> 
 		</div>
 
 		<div class="response">
-			<input type="time" name="startTime" value="06:00" required>	
+			<input id="startTime" type="time" name="startTime" value="06:00" required>	
 		</div>
 
 		<div class="question">
-			<p>What time do you leave work?</p> 
+			<div class="time-entry"><label id="endTime-label" for="endTime">What time do you leave work?</label></div>
 		</div>
 
 		<div class="response">
-			<input type="time" name="endTime" value="19:00" required>	
+			<div class="time-entry"><input id="endTime" type="time" name="endTime" value="19:00" required></div>	
 		</div>
 		 </fieldset>
 
 		<div class="question">
-			<p>Company Start Date (Approximation is okay)</p> 
+			<label id="startDate-label" for="startDate">Company Start Date (Approximation is okay)</label> 
 		</div>
 
 		<div class="response">
-			<input type="date" name="startDate"> 	
+			<div class="date-entry"><input id="startDate" type="date" name="startDate"></div> 	
 			<!-- Use month if available <input type="month" name="startDate"> --> 	
 		</div>
 
 		<div class="question">
-			<p>Your Team Name</p> 
+			<label id="dropdown-label" for="dropdown">Your Team Name</label> 
 		</div>
 
 		<div class="response">
-			<select name="teamName">	
-
+			<select id="dropdown" name="teamName">	
 				<option disabled selected value>--Please select a team--</option>
-				<option>The Coots</option>
-				<option>Herons of the Night</option>
-				<option>American Pelicans in America</option>
-				<option>Not-so-Canadian Geese</option>
-				<option>The Greatest Scaups</option>
+				<option value="coot">The Coots</option>
+				<option value="heron">Herons of the Night</option>
+				<option value="pelican">American Pelicans in America</option>
+				<option value="goose">Not-so-Canadian Geese</option>
+				<option value="duck">The Greatest Scaups</option>
 			</select>
 		</div>
 
 		<div class="question">
-			<p>
-Which of the following best describes your current role in the team?
-			</p> 
+			<span>Which of the following best describes your current role in the team?</span> 
 		</div>
 
-		<div class="response">
-			<ul>
-			<li><input type="radio" name="role"> Team Lead</li>
-			<li><input type="radio" name="role"> Front-end Engineer</li>
-			<li><input type="radio" name="role"> Back-end Engineer</li>
-			<li><input type="radio" name="role"> Data Person</li>
-			<li><input type="radio" name="role"> QA</li>
-			</ul>
+		<div class="mc-choice-list response">
+			<div class="mc-choice"><input id="lead" type="radio" name="role" value="lead"> <label id="lead-label" for="lead">Team Lead</label></div>
+			<div class="mc-choice"><input id="front" type="radio" name="role" value="front"> <label id="front-label" for="front">Front-end Engineer</label></div>
+			<div class="mc-choice"><input id="back" type="radio" name="role" value="back"> <label id="back-label" for="back">Back-end Engineer</label></div>
+			<div class="mc-choice"><input id="data" type="radio" name="role" value="data"> <label id="data-label" for="data">Data Person</label></div>
+			<div class="mc-choice"> <input id="qa" type="radio" name="role" value="qa"> <label id="qa-label" for="qa">QA</label></div>
 		</div>
 		 </section>
 
 		 <section>
 			 <h2>Outing Information</h2>
 		<div class="question">
- <p>Please select at least 3 activities that interest you.</p>
+ <span>Please select at least 3 activities that interest you.</span>
 		</div>
 
-		<div class="response">
-			<input type="checkbox" value="fish">Curling
-			<input type="checkbox" value="fish">Karaoke
-			<input type="checkbox" value="fish">Movie and Dinner
-			<input type="checkbox" value="fish">Glass blowing
-			<input type="checkbox" value="fish">Laser Tag
-			<input type="checkbox" value="fish">Mini Golf
-			<input type="checkbox" value="fish">Arcade
-			<input type="checkbox" value="fish">Beach
-			<input type="checkbox" value="fish">Food tour
-			<input type="checkbox" value="fish">Wine tasting
-			<input type="checkbox" value="fish">Museum
-		</div>
-
-		<div class="question">
-	<p>Are there any days you absolutely cannot attend? Enter up to 3 dates between May 1 and May 31.</p>
-		</div>
-
-		<div class="response">
-			<ul>
-			<li><input type="date" name="startDate"></li> 	
-			<li><input type="date" name="startDate"></li> 	
-			<li><input type="date" name="startDate"></li> 	
-			</ul>
+		<div class="ms-choice-list response">
+			<div class="ms-choice"><input id="curling" type="checkbox" value="curling"><label id="curling-label" for="curling">Curling</label></div>
+			<div class="ms-choice"><input id="karaoke" type="checkbox" value="karaoke"><label id="karaoke-label" for="karaoke">Karaoke</label></div>
+			<div class="ms-choice"><input id="movie" type="checkbox" value="movie"><label id="movie-label" for="movie">Movie and Dinner</label></div>
+			<div class="ms-choice"><input id="glass" type="checkbox" value="glass"><label id="glass-label" for="glass">Glass blowing</label></div>
+			<div class="ms-choice"><input id="laser" type="checkbox" value="laser"><label id="laser-label" for="laser">Laser Tag</label></div>
+			<div class="ms-choice"><input id="golf" type="checkbox" value="golf"><label id="golf-label" for="golf">Mini Golf</label></div>
+			<div class="ms-choice"><input id="arcade" type="checkbox" value="arcade"><label id="arcade-label" for="arcade">Arcade</label></div>
+			<div class="ms-choice"><input id="beach" type="checkbox" value="beach"><label id="beach-label" for="beach">Beach</label></div>
+			<div class="ms-choice"><input id="food" type="checkbox" value="food"><label id="food-label" for="food">Food tour</label></div>
+			<div class="ms-choice"><input id="wine" type="checkbox" value="wine"><label id="wine-label" for="wine">Wine tasting</label></div>
+			<div class="ms-choice"><input id="museum" type="checkbox" value="museum"><label id="museum-label" for="museum">Museum</label></div>
 		</div>
 
 		<div class="question">
-			<p>Any comments or suggestions?</p>
+	<span>Are there any days you absolutely cannot attend? Enter up to 3 dates between May 1 and May 31.</span>
+		</div>
+
+		<div class="response multiple-dates">
+			<div class="date-entry"><input type="date" name="bad-day1"></div> 	
+			<div class="date-entry"><input type="date" name="bad-day2"></div> 	
+			<div class="date-entry"><input type="date" name="bad-day3"></div> 	
+		</div>
+
+		<div class="question">
+			<label id="comment-label" for="comment">Any comments or suggestions?</label>
 		</div>
 
 		<div class="response">
-			<input type="text">		
+			<textarea id="comment" name="comment" form="survey-form"></textarea>
 		</div>
 		 </section>
 
-		<input type="submit" value="Submit">
-		<input type="reset">
+		<input id="submit" type="submit" value="Submit">
+		<input id="reset" type="reset">
 	 </form> 
 	</main>
 	<footer>
 	<hr/>
 	<p>Copyright &#169; <time datetime="2019">2019</time> by Ki Song. All rights reserved.</p>
-	<p>This page was last updated on <time datetime="2019-04-16">April 16th, 2019</time>.</p>
+	<p>This page was last updated on <time datetime="2019-04-17">April 17th, 2019</time>.</p>
 	</footer>
 </body>
 </html> 
