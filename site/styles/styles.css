@@ -4,9 +4,6 @@
 	--response-field-width: 73vw; 
 }
 
-h1, h2 {
-	text-align: center;
-}
 
 #container {
 	padding: 0vw 4vw;
@@ -16,11 +13,13 @@ header {
 	padding: 0vw 3vw;
 }
 
+h1, h2 {
+	text-align: center;
+}
+
 p {
 	text-align: justify;
 }
-
-
 
 section {
 	border-style: solid;
@@ -62,6 +61,11 @@ input:not([type='checkbox']):not([type="radio"]){
 	margin: auto;
 }
 
+
+fieldset {
+	margin-bottom: 3vw;
+}
+
 legend {
 	display: block;
 	margin: auto;
@@ -70,14 +74,6 @@ legend {
 .disclaimer {
 	font-weight: bold;
 	color: red;
-}
-
-fieldset {
-	margin-bottom: 3vw;
-}
-
-.long {
-	text-align:justify;
 }
 
 #buttons {
