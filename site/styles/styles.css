@@ -2,31 +2,55 @@
 	--input-field-width: 100%;
 	--question-field-width: 73vw; 
 	--response-field-width: 73vw; 
+	--font-family: Verdana, Geneva, sans-serif;
 }
 
+body {
+	font-family: var(--font-family, Verdana, Geneva, sans-serif);
+	color: hsl(213, 79%, 25%);
+	background-color: hsl(153, 79%, 93%);
+	font-size: medium;
+}
 
 #container {
 	padding: 0vw 4vw;
 }
 
-header {
-	padding: 0vw 3vw;
+header p {
+	padding: 6vw;
 }
+
+
+header, section {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5vw;
+	border-color: hsl(33, 79%, 50%);
+	box-shadow: 2px 2px 3px;
+	margin-bottom: 6vw;
+	background-color: hsl(33, 79%, 93%);
+}
+
 
 h1, h2 {
 	text-align: center;
+	text-shadow: .5px .5px;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 18px;
 }
 
 p {
 	text-align: justify;
+	font-size: small;
 }
 
 section {
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 5vw;
-	padding: 2vw;
-	margin-bottom: 6vw;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(auto-fill, auto);
@@ -36,31 +60,37 @@ section {
 .question {
 	display: block;
 	margin: 0 auto;
-	width: 73vw;
+	margin-bottom: 3px;
+	width: var(--question-field-width, 73vw);
+	text-shadow: .5px .5px;
 }
 
 .response {
 	display: block;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	width: 73vw;
+	width: var(--response-field-width, 73vw);
 }
 
 input:not([type='checkbox']):not([type="radio"]){
-	width: 100%;
+	width: var(--input-field-width, 100%);
+	font-family: var(--font-family, Verdana, Geneva, sans-serif);
+	font-size: medium;
 }
 
 #dropdown {
-	width: 100%;
+	width: var(--input-field-width, 100%);
+	font-size: medium;
 }
 
 #comment {
-	width:100%;
+	width: var(--input-field-width, 100%);
 	height: 40vh;
 	display: block;
 	margin: auto;
+  font-family: var(--font-family, Verdana, Geneva, sans-serif);
+	font-size: medium;
 }
-
 
 fieldset {
 	margin-bottom: 3vw;
@@ -69,11 +99,20 @@ fieldset {
 legend {
 	display: block;
 	margin: auto;
+	font-weight: bold;
+}
+
+fieldset p {
+	font-size: small;
 }
 
 .disclaimer {
 	font-weight: bold;
 	color: red;
+}
+
+.mc-choice, .ms-choice {
+	font-size: small;
 }
 
 #buttons {
