@@ -11,6 +11,17 @@ header p {
 	padding: 3vw;
 }
 
+#buttons {
+	display:flex;
+}
+
+.button {
+	flex-grow: 1;
+	flex-shrink: 1;
+	padding: 3vw;
+	font-size: medium;
+}
+
 footer {
 	text-align: center;
 	font-size: small;
@@ -23,3 +34,4 @@ section {
 	padding: 2vw;
 	margin: 6vw 0vw;
 }
+
