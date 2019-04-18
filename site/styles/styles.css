@@ -20,6 +20,14 @@ header p {
 	padding: 6vw;
 }
 
+.heading {
+	margin: -2px -2px 10px -2px ;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5vw 5vw 0 0;
+	border-color: hsl(33, 79%, 50%);
+	background-color: hsl(33, 95%, 98%);
+}
 
 header, section {
 	border-style: solid;
