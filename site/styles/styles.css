@@ -1,0 +1,25 @@
+h1, h2 {
+	text-align: center;
+}
+
+#container {
+	padding: 0vw 4vw;
+}
+
+header p {
+	text-align: justify;
+	padding: 3vw;
+}
+
+footer {
+	text-align: center;
+	font-size: small;
+}
+
+section {
+	border: 1px;
+	border-style: solid;
+	border-radius: 5vw;
+	padding: 2vw;
+	margin: 6vw 0vw;
+}
