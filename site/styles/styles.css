@@ -2,7 +2,7 @@
 	--input-field-width: 100%;
 	--question-field-width: 73vw; 
 	--response-field-width: 73vw; 
-	--font-family: Verdana, Geneva, sans-serif;
+	--font-family: Verdana, sans-serif;
 }
 
 body {
@@ -10,6 +10,7 @@ body {
 	color: hsl(213, 79%, 25%);
 	background-color: hsl(153, 79%, 93%);
 	font-size: medium;
+	overflow: scroll;
 }
 
 #container {
@@ -43,6 +44,7 @@ header, section {
 h1, h2 {
 	text-align: center;
 	text-shadow: .5px .5px;
+	font-weight: bold;
 }
 
 h1 {
@@ -93,24 +95,33 @@ input:not([type='checkbox']):not([type="radio"]){
 
 #comment {
 	width: var(--input-field-width, 100%);
-	height: 40vh;
+	height: 8em; 
 	display: block;
 	margin: auto;
   font-family: var(--font-family, Verdana, Geneva, sans-serif);
 	font-size: medium;
 }
 
+#work-hours {
+	margin: 2vw;
+	border-style: double;
+	border-color: gray;
+}
+
 fieldset {
-	margin-bottom: 3vw;
+	border-width: 0px;
 }
 
 legend {
 	display: block;
 	margin: auto;
+	text-align: center;
 	font-weight: bold;
+	font-size: medium;
 }
 
 fieldset p {
+	padding: 3px;
 	font-size: small;
 }
 
@@ -119,8 +130,33 @@ fieldset p {
 	color: red;
 }
 
+label {
+	font-weight: normal;
+}
+
 .mc-choice, .ms-choice {
 	font-size: small;
+}
+
+
+.response label {
+	margin-left: 3px;
+}
+
+#other-choice {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#other-choice-content {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+#other-choice-content input {
+	width: 75%;
 }
 
 #buttons {
