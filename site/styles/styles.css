@@ -1,7 +1,7 @@
 :root {
 	--input-field-width: 100%;
-	--question-field-width: 73vw; 
-	--response-field-width: 73vw; 
+	--question-field-width: 90%; 
+	--response-field-width: 90%; 
 	--font-family: Verdana, sans-serif;
 }
 
@@ -18,17 +18,9 @@ body {
 }
 
 header p {
-	padding: 6vw;
+	padding: 20px;
 }
 
-.heading {
-	margin: -2px -2px 10px -2px ;
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 5vw 5vw 0 0;
-	border-color: hsl(33, 79%, 50%);
-	background-color: hsl(33, 95%, 98%);
-}
 
 header, section {
 	border-style: solid;
@@ -36,7 +28,7 @@ header, section {
 	border-radius: 5vw;
 	border-color: hsl(33, 79%, 50%);
 	box-shadow: 2px 2px 3px;
-	margin-bottom: 6vw;
+	margin-bottom: 23px;
 	background-color: hsl(33, 79%, 93%);
 }
 
@@ -48,16 +40,19 @@ h1, h2 {
 }
 
 h1 {
-	font-size: 22px;
+	/* font-size: 22px; */
+	font-size: 5vw;
 }
 
 h2 {
-	font-size: 18px;
+	/* font-size: 18px; */
+	font-size: 4.5vw;
 }
 
 p {
 	text-align: justify;
 	font-size: small;
+
 }
 
 section {
@@ -65,6 +60,15 @@ section {
 	grid-template-columns: 100%;
 	grid-template-rows: repeat(auto-fill, auto);
 	grid-row-gap: 1px;
+}
+
+.heading {
+	margin: -2px -2px 10px -2px ;
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5vw 5vw 0 0;
+	border-color: hsl(33, 79%, 50%);
+	background-color: hsl(33, 95%, 98%);
 }
 
 .question {
@@ -135,7 +139,7 @@ label {
 }
 
 .mc-choice, .ms-choice {
-	font-size: small;
+	font-size: 90%;
 }
 
 
