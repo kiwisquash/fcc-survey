@@ -6,9 +6,12 @@ h1, h2 {
 	padding: 0vw 4vw;
 }
 
-header p {
-	text-align: justify;
+header {
 	padding: 0vw 3vw;
+}
+
+p {
+	text-align: justify;
 }
 
 #buttons {
@@ -28,21 +31,36 @@ footer {
 }
 
 section {
-	border: 1px;
 	border-style: solid;
+	border-width: 1px;
 	border-radius: 5vw;
 	padding: 2vw;
-	margin: 6vw 0vw;
+	margin-bottom: 6vw;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: repeat(auto-fill, auto);
+	grid-row-gap: 1px;
 }
 
+.question {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+/* fieldset .question { */
+/* 	/1* margin-left: 1.5vw; *1/ */
+/* } */
+
 .response {
-	align: center;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	width: 90%;
 }
 
 input:not([type='checkbox']):not([type="radio"]){
-	width: 71vw;
-	display: block;
-	margin: auto;
+	width: 100%;
 }
 
 #dropdown {
@@ -66,4 +84,12 @@ legend {
 .disclaimer {
 	font-weight: bold;
 	color: red;
+}
+
+fieldset {
+	margin-bottom: 3vw;
+}
+
+.long {
+	text-align:justify;
 }
