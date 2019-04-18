@@ -52,7 +52,6 @@ h2 {
 p {
 	text-align: justify;
 	font-size: small;
-
 }
 
 section {
@@ -138,11 +137,6 @@ label {
 	font-weight: normal;
 }
 
-.mc-choice, .ms-choice {
-	font-size: 90%;
-}
-
-
 .response label {
 	margin-left: 3px;
 }
@@ -154,13 +148,23 @@ label {
 }
 
 #other-choice-content {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
 }
 
-#other-choice-content input {
-	width: 75%;
+#other-text {
+	/* background-color: blue; */
+}
+
+#other-choice-fill {
+	width: 100%;
+	/* background-color: red; */
+}
+
+#other-choice-fill input {
+	width: 100%;
 }
 
 #buttons {
@@ -178,3 +182,32 @@ footer p {
 	text-align: center;
 	font-size: small;
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 27px;
+}
+
+p {
+	font-size: medium;
+}
+
+fieldset p {
+	font-size: medium;
+}
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
