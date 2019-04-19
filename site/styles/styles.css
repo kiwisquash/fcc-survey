@@ -185,6 +185,7 @@ input[type="checkbox"] {
 	flex-shrink: 1;
 	padding: 3vw;
 	font-size: small;
+	cursor: pointer;
 }
 
 hr {
@@ -292,6 +293,19 @@ section {
 	grid-area: 7 / 1 / 8 / 3;
 }
 
+#buttons {
+	display: flex;
+}
+
+.button {
+	font-size: medium;
+	padding: 15px;
+	width: 15px;
+	margin: 20px;
+}
+
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	#background {
@@ -304,7 +318,4 @@ section {
 		z-index: -1;
 		opacity: .5;
 }
-		
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
