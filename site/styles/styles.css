@@ -18,7 +18,7 @@ body {
 }
 
 header p {
-	padding: 20px;
+	padding: 0px 20px 20px 20px;
 }
 
 
@@ -106,7 +106,7 @@ input:not([type='checkbox']):not([type="radio"]){
 }
 
 #work-hours {
-	margin: 2vw;
+	margin: 5px 10px 10px 10px;
 	border-style: double;
 	border-color: gray;
 }
@@ -117,14 +117,15 @@ fieldset {
 
 legend {
 	display: block;
-	margin: auto;
+	margin: -.75em auto auto auto;
 	text-align: center;
 	font-weight: bold;
 	font-size: medium;
+	background-color: hsl(33, 79%, 93%);
 }
 
 fieldset p {
-	padding: 3px;
+	margin-top: 0px;
 	font-size: small;
 }
 
