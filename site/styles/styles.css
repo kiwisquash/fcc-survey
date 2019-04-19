@@ -23,6 +23,7 @@ header p {
 
 
 header, section {
+  box-sizing: content-box;
 	border-style: solid;
 	border-width: 2px;
 	border-radius: 5vw;
@@ -62,6 +63,7 @@ section {
 }
 
 .heading {
+	box-sizing: content-box;
 	margin: -2px -2px 10px -2px ;
 	border-style: solid;
 	border-width: 2px;
@@ -117,15 +119,20 @@ fieldset {
 
 legend {
 	display: block;
+	padding: 0px 3px;
+  width: auto;
 	margin: -.75em auto auto auto;
 	text-align: center;
 	font-weight: bold;
 	font-size: 4vw;
+	color: hsl(213, 79%, 25%);
 	background-color: hsl(33, 79%, 93%);
+	border-width: 0px;
 }
 
 fieldset p {
 	margin-top: 0px;
+	padding: 10px;
 	font-size: small;
 }
 
@@ -151,8 +158,8 @@ label {
 	align-items: baseline;
 }
 
-#other-text {
-	/* background-color: blue; */
+input[type="checkbox"] {
+	margin-right: 5.6px;
 }
 
 #other-choice-fill {
@@ -215,6 +222,7 @@ header, section {
 	box-shadow: 2px 2px 3px;
 	margin-bottom: 23px;
 	background-color: hsl(33, 79%, 93%);
+	z-index: 10;
 }
 
 section {
@@ -254,7 +262,7 @@ section {
 
 #work-hours fieldset {
 	display: grid;
-	grid-template-columns: 13em auto;
+	grid-template-columns: 13em auto-fill;
 	grid-template-rows: repeat(auto-fill, auto);
 	grid-row-gap: 1em;
 	grid-column-gap: .5em;
@@ -262,6 +270,12 @@ section {
 
 #work-hours fieldset p {
 	grid-area: 1 / 1 / 2 /3 ;
+}
+
+.mc-choice-list, .ms-choice-list {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-columns: repeat(auto-fill, auto);
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
