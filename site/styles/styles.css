@@ -120,7 +120,7 @@ legend {
 	margin: -.75em auto auto auto;
 	text-align: center;
 	font-weight: bold;
-	font-size: medium;
+	font-size: 4vw;
 	background-color: hsl(33, 79%, 93%);
 }
 
@@ -136,10 +136,6 @@ fieldset p {
 
 label {
 	font-weight: normal;
-}
-
-.response label {
-	margin-left: 3px;
 }
 
 #other-choice {
@@ -196,6 +192,10 @@ h2 {
 
 p {
 	font-size: medium;
+}
+
+legend {
+	font-size: 24px;
 }
 
 fieldset p {
