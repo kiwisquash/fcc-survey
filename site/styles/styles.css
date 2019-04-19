@@ -8,9 +8,14 @@
 body {
 	font-family: var(--font-family, Verdana, Geneva, sans-serif);
 	color: hsl(213, 79%, 25%);
-	background-color: hsl(153, 79%, 93%);
 	font-size: medium;
+	background-color: hsl(153, 79%, 93%);
 	overflow: scroll;
+}
+
+#outer-container {
+	margin: -15px auto -15px auto;
+	padding-top: 38px;
 }
 
 #container {
@@ -182,6 +187,10 @@ input[type="checkbox"] {
 	font-size: small;
 }
 
+hr {
+	color: gray;
+}
+
 footer p {
 	text-align: center;
 	font-size: small;
@@ -214,15 +223,18 @@ fieldset p {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
+#outer-container {
+	width: 100%;
+	max-width: 800px;
+	margin: -15px auto -15px auto;
+}
+
 header, section {
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 30px;
+	border-radius: 38.4px;
 	border-color: hsl(33, 79%, 50%);
 	box-shadow: 2px 2px 3px;
 	margin-bottom: 23px;
 	background-color: hsl(33, 79%, 93%);
-	z-index: 10;
 }
 
 section {
@@ -232,7 +244,6 @@ section {
 	grid-template-rows: repeat(auto-fill, auto);
 	grid-row-gap: 1em;
 	grid-column-gap: .5em;
-	/* justify-items: stretch; */
 	padding-bottom: 1em;
 }
 
@@ -247,7 +258,6 @@ section {
 	text-align: right;
 	margin: 0px;
 	align-self: center;
-	/* background-color: pink; */
 }
 
 .response {
@@ -278,9 +288,23 @@ section {
 	grid-template-columns: repeat(auto-fill, auto);
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+#other-choice {
+	grid-area: 7 / 1 / 8 / 3;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	#background {
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+	  background-image: url(https://images.thrillophilia.com/image/upload/s--u51OsYQu--/c_fill,f_auto,fl_strip_profile,h_446,q_auto,w_750/v1/images/photos/000/100/210/original/1472728296_lp-2.png.jpg?1472728296); 
+		z-index: -1;
+		opacity: .5;
+}
+		
+}
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {...}
