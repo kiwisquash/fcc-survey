@@ -287,7 +287,7 @@ section {
 .mc-choice-list, .ms-choice-list {
 	display: grid;
 	grid-template-columns: 50% 50%;
-	grid-template-columns: repeat(auto-fill, auto);
+	grid-template-rows: repeat(auto-fill, auto);
 }
 
 #other-choice {
