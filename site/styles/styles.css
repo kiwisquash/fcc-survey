@@ -3,23 +3,24 @@
 	--question-field-width: 90%; 
 	--response-field-width: 90%; 
 	--font-family: Verdana, sans-serif;
+	--outer-background-color: hsl(153, 79%, 93%);
 }
 
 body {
 	font-family: var(--font-family, Verdana, Geneva, sans-serif);
 	color: hsl(213, 79%, 25%);
 	font-size: medium;
-	background-color: hsl(153, 79%, 93%);
-	overflow: scroll;
-}
-
-#outer-container {
-	margin: -15px auto -15px auto;
-	padding-top: 38px;
+	background-color: var(--outer-background-color, hsl(153, 79%, 93%));
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #container {
-	padding: 0vw 4vw;
+	margin: -15px auto 0 auto;
+	padding-top: 38px;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	padding-bottom: 30px;
 }
 
 header p {
@@ -193,9 +194,20 @@ hr {
 	color: gray;
 }
 
+footer {
+	width: 106%;
+	margin: 0% -3% -3% -3%;
+	background-color: var(--outer-background-color, hsl(153, 79%, 93%));
+	padding-top: 1px;
+	border-top-style: double;
+	border-width-top: 1px;
+	border-color: gray;
+}
+
 footer p {
 	text-align: center;
 	font-size: small;
+	padding: 0em 1em;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -225,7 +237,7 @@ fieldset p {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 
-#outer-container {
+#container {
 	width: 100%;
 	max-width: 800px;
 	margin: -15px auto -15px auto;
