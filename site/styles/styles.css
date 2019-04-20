@@ -20,7 +20,7 @@ body {
 	padding-top: 38px;
 	padding-left: 4vw;
 	padding-right: 4vw;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 
 header p {
@@ -240,7 +240,6 @@ fieldset p {
 #container {
 	width: 100%;
 	max-width: 800px;
-	margin: -15px auto -15px auto;
 }
 
 header, section {
