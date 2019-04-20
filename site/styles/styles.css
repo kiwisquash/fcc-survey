@@ -92,7 +92,7 @@ section {
 	width: var(--response-field-width, 73vw);
 }
 
-input:not([type='checkbox']):not([type="radio"]){
+input:not([type='checkbox']):not([type="radio"]):not([type="submit"]):not([type="reset"]){
 	width: var(--input-field-width, 100%);
 	font-family: var(--font-family, Verdana, Geneva, sans-serif);
 	font-size: medium;
@@ -177,14 +177,15 @@ input[type="checkbox"] {
 }
 
 #buttons {
-	display:flex;
+	display: flex;
+	width: 100%;
 }
 
 .button {
-	flex-grow: 1;
-	flex-shrink: 1;
-	padding: 3vw;
-	font-size: small;
+	width: 100%;
+	height: 4em;
+	padding: 1em;
+	font-size: medium;
 	cursor: pointer;
 }
 
@@ -294,14 +295,15 @@ section {
 }
 
 #buttons {
-	display: flex;
+ 	justify-content: center;	
 }
 
 .button {
-	font-size: medium;
-	padding: 15px;
-	width: 15px;
-	margin: 20px;
+	width: 200px;
+	font-size: large;
+	margin: 0px 25px;
+	border-radius: 13px;
+	border-width: 2px;
 }
 
 }
