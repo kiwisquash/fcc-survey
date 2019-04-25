@@ -4,11 +4,14 @@
 	--response-field-width: 90%; 
 	--font-family: Verdana, sans-serif;
 	--outer-background-color: hsl(153, 79%, 93%);
+	--inner-background-color: hsl(33, 79%, 93%);
+	--heading-background-color: hsl(33, 95%, 98%);
+	--body-font-color: hsl(213, 79%, 25%);
 }
 
 body {
 	font-family: var(--font-family, Verdana, Geneva, sans-serif);
-	color: hsl(213, 79%, 25%);
+	color: var(--body-font-color, hsl(213, 79%, 25%));
 	font-size: medium;
 	background-color: var(--outer-background-color, hsl(153, 79%, 93%));
 	overflow-y: scroll;
@@ -36,7 +39,8 @@ header, section {
 	border-color: hsl(33, 79%, 50%);
 	box-shadow: 2px 2px 3px;
 	margin-bottom: 23px;
-	background-color: hsl(33, 79%, 93%);
+	background-color: var(--inner-background-color, hsl(33, 79%, 93%));
+
 }
 
 
@@ -75,7 +79,7 @@ section {
 	border-width: 2px;
 	border-radius: 5vw 5vw 0 0;
 	border-color: hsl(33, 79%, 50%);
-	background-color: hsl(33, 95%, 98%);
+	background-color: var(--heading-background-color, hsl(33, 95%, 98%));
 }
 
 .question {
@@ -131,8 +135,8 @@ legend {
 	text-align: center;
 	font-weight: bold;
 	font-size: 4vw;
-	color: hsl(213, 79%, 25%);
-	background-color: hsl(33, 79%, 93%);
+	color: var(--body-font-color, hsl(213, 79%, 25%));
+	background-color: var(--inner-background-color, hsl(33, 79%, 93%));
 	border-width: 0px;
 }
 
@@ -171,7 +175,6 @@ input[type="checkbox"] {
 #other-choice-fill {
 	padding-left: 4px;
 	width: 100%;
-	/* background-color: red; */
 }
 
 #other-choice-fill input {
@@ -189,10 +192,6 @@ input[type="checkbox"] {
 	padding: 1em;
 	font-size: medium;
 	cursor: pointer;
-}
-
-hr {
-	color: gray;
 }
 
 footer {
@@ -244,10 +243,8 @@ fieldset p {
 
 header, section {
 	border-radius: 38.4px;
-	border-color: hsl(33, 79%, 50%);
 	box-shadow: 2px 2px 3px;
 	margin-bottom: 23px;
-	background-color: hsl(33, 79%, 93%);
 }
 
 section {
